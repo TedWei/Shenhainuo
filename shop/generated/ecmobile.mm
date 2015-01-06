@@ -1043,7 +1043,6 @@ DEF_MESSAGE_( comments, msg )
 		requestBody.APPEND( @"goods_id", goods_id );
 		requestBody.APPEND( @"pagination", pagination );
 
-//		NSString * requestURI = @"http://shop.ecmobile.me/ecmobile/?url=comments";
 		NSString * requestURI = [NSString stringWithFormat:@"%@/comments", [ServerConfig sharedInstance].url];
 		
 		msg.HTTP_POST( requestURI ).PARAM( @"json", requestBody.objectToString );

@@ -52,7 +52,7 @@ ON_CREATE_VIEWS( signal )
     
     @weakify(self);
     
-    self.navigationBarTitle=__TEXT(@"ECMobile");
+    self.navigationBarTitle=__TEXT(@"ecmobile");
     
     
     $(@"#title").TEXT(__TEXT(@"purchased_list"));
