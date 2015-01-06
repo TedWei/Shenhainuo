@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="I0_PersonalListBoard_iPhone">
+    
+    <row class="list-item">
+        <image class="list-bg"/>
+        <label id="title" class="list-title"></label>
+    </row>
+    <list id="list" class="col-md-6"/>
+    <row class="list-item">
+        <image class="list-bg"/>
+        <label id="title2" class="list-title"></label>
+    </row>
+    <list id="list2" class="col-md-6"/>
+    <style type="text/css">
+        #list {
+        width:100%;
+        height:40%;
+        }
+        
+        #title {
+        width:100%;
+        height:auto;
+        }
+        
+        #title2{
+        width:100%;
+        height:auto;
+        }
+        
+        top:10px;
+        }
+        
+        #list2{
+        width:100%;
+        height:40%;
+        }
+        
+        .list-item{
+        margin-top: 10px;
+        width: 96%;
+        left:2%;
+        height: 44px;
+        v-align: center;
+        }
+        
+        .list-title {
+        margin-left: 14px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        width: 100%;
+        text-align: left;
+        height: 20px;
+        }
+        
+        .list-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image: url(body_cont_bg.png);
+        image-insets: 10;
+        image-mode: fit;
+        }
+    </style>
+</ui>
+
+
