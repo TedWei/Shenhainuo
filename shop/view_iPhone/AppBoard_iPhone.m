@@ -192,6 +192,7 @@ ON_SIGNAL3( AppTabbar_iPhone, home_button, signal )
 {
 	[bee.ui.tabbar selectHome];
     if ([UserModel online] == YES) {
+
         [bee.ui.router open:AppBoard_iPhone.TAB_Personal animated:NO];
     }else{
 	    [bee.ui.router open:AppBoard_iPhone.TAB_HOME animated:NO];

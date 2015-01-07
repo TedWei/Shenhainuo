@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9ADDB154-65C9-4B3A-8603-674A01192610</string>
+	<key>IDESourceControlProjectName</key>
+	<string>shop</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0E3E8DC3FBBC06770836970C82B427410086EE3C</key>
+		<string>https://github.com/TedWei/Shenhainuo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>shop.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0E3E8DC3FBBC06770836970C82B427410086EE3C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TedWei/Shenhainuo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0E3E8DC3FBBC06770836970C82B427410086EE3C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0E3E8DC3FBBC06770836970C82B427410086EE3C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Shenhainuo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 geek-zoo studio. All rights reserved.
 //
 
-#import "Bee_ViewModel.h"
 
-@interface IO_PersonalListCell_iPhone : BeeViewModel
+#import "Bee_UICell.h"
+
+@interface I0_PersonalListCell_iPhone : BeeUICell
 
 @end

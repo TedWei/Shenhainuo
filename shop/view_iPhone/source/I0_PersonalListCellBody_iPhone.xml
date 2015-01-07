@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ui namespace="I0_PersonalListCell_iPhone">
+<ui namespace="I0_PersonalListCellBody_iPhone">
     
     <linear id="mask" class="container">
         <image id="bg" />
@@ -55,4 +55,3 @@
         
     </style>
 </ui>
-

@@ -16,7 +16,8 @@
 
 AS_OUTLET( BeeUIScrollView, list )
 
-AS_MODEL( SearchCategoryModel, searchCategoryModel )
+AS_MODEL( OrderModel, orderModel)
+
 
 
 @end

@@ -62,6 +62,8 @@
 		6324A4231754FC7700372FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A4151754FC7700372FD7 /* SystemConfiguration.framework */; };
 		6324A4241754FC7700372FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A4161754FC7700372FD7 /* UIKit.framework */; };
 		6324A91E1755AA8300372FD7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A91D1755AA8300372FD7 /* AudioToolbox.framework */; };
+		7978A79B1A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978A79A1A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.m */; };
+		7978A79D1A5D0BE20014A667 /* I0_PersonalListCellBody_iPhone.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7978A79C1A5D0BE20014A667 /* I0_PersonalListCellBody_iPhone.xml */; };
 		79F18F431A21CC0A00AA1CE4 /* bee.services.liveload.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F18F361A21CC0A00AA1CE4 /* bee.services.liveload.m */; };
 		79F18F441A21CC0A00AA1CE4 /* bee.services.liveload.md in Sources */ = {isa = PBXBuildFile; fileRef = 79F18F371A21CC0A00AA1CE4 /* bee.services.liveload.md */; };
 		79F18F451A21CC0A00AA1CE4 /* ServiceLiveload.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F18F3A1A21CC0A00AA1CE4 /* ServiceLiveload.m */; };
@@ -78,7 +80,7 @@
 		79FD50711A5BE55100309364 /* round_rectangle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FD50701A5BE55100309364 /* round_rectangle@3x.png */; };
 		79FD50741A5BE78C00309364 /* I0_PersonalListBoard_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FD50731A5BE78C00309364 /* I0_PersonalListBoard_iPhone.m */; };
 		79FD50761A5BEA3300309364 /* I0_PersonalListBoard_iPhone.xml in Resources */ = {isa = PBXBuildFile; fileRef = 79FD50751A5BEA3300309364 /* I0_PersonalListBoard_iPhone.xml */; };
-		79FD50791A5BF0B100309364 /* IO_PersonalListCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FD50781A5BF0B100309364 /* IO_PersonalListCell_iPhone.m */; };
+		79FD50791A5BF0B100309364 /* I0_PersonalListCell_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FD50781A5BF0B100309364 /* I0_PersonalListCell_iPhone.m */; };
 		79FD507B1A5BF0C700309364 /* I0_PersonalListCell_iPhone.xml in Resources */ = {isa = PBXBuildFile; fileRef = 79FD507A1A5BF0C700309364 /* I0_PersonalListCell_iPhone.xml */; };
 		CB013ED018C0500700D381A0 /* CommonNoResultCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = CB013ECF18C0500700D381A0 /* CommonNoResultCell.xml */; };
 		CB55509A18B45695000EC760 /* NSObject+ScrollViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = CB55509918B45695000EC760 /* NSObject+ScrollViewExt.m */; };
@@ -994,6 +996,9 @@
 		6324A4151754FC7700372FD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6324A4161754FC7700372FD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6324A91D1755AA8300372FD7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7978A7991A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I0_PersonalListCellBody_iPhone.h; sourceTree = "<group>"; };
+		7978A79A1A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I0_PersonalListCellBody_iPhone.m; sourceTree = "<group>"; };
+		7978A79C1A5D0BE20014A667 /* I0_PersonalListCellBody_iPhone.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = I0_PersonalListCellBody_iPhone.xml; sourceTree = "<group>"; };
 		79F18F351A21CC0A00AA1CE4 /* bee.services.liveload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bee.services.liveload.h; sourceTree = "<group>"; };
 		79F18F361A21CC0A00AA1CE4 /* bee.services.liveload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bee.services.liveload.m; sourceTree = "<group>"; };
 		79F18F371A21CC0A00AA1CE4 /* bee.services.liveload.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = bee.services.liveload.md; sourceTree = "<group>"; };
@@ -1019,8 +1024,8 @@
 		79FD50721A5BE78C00309364 /* I0_PersonalListBoard_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I0_PersonalListBoard_iPhone.h; sourceTree = "<group>"; };
 		79FD50731A5BE78C00309364 /* I0_PersonalListBoard_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I0_PersonalListBoard_iPhone.m; sourceTree = "<group>"; };
 		79FD50751A5BEA3300309364 /* I0_PersonalListBoard_iPhone.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = I0_PersonalListBoard_iPhone.xml; sourceTree = "<group>"; };
-		79FD50771A5BF0B100309364 /* IO_PersonalListCell_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IO_PersonalListCell_iPhone.h; sourceTree = "<group>"; };
-		79FD50781A5BF0B100309364 /* IO_PersonalListCell_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IO_PersonalListCell_iPhone.m; sourceTree = "<group>"; };
+		79FD50771A5BF0B100309364 /* I0_PersonalListCell_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I0_PersonalListCell_iPhone.h; sourceTree = "<group>"; };
+		79FD50781A5BF0B100309364 /* I0_PersonalListCell_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I0_PersonalListCell_iPhone.m; sourceTree = "<group>"; };
 		79FD507A1A5BF0C700309364 /* I0_PersonalListCell_iPhone.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = I0_PersonalListCell_iPhone.xml; sourceTree = "<group>"; };
 		CB013ECF18C0500700D381A0 /* CommonNoResultCell.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CommonNoResultCell.xml; sourceTree = "<group>"; };
 		CB55509818B45695000EC760 /* NSObject+ScrollViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ScrollViewExt.h"; sourceTree = "<group>"; };
@@ -3169,9 +3174,12 @@
 				79FD50721A5BE78C00309364 /* I0_PersonalListBoard_iPhone.h */,
 				79FD50731A5BE78C00309364 /* I0_PersonalListBoard_iPhone.m */,
 				79FD50751A5BEA3300309364 /* I0_PersonalListBoard_iPhone.xml */,
-				79FD50771A5BF0B100309364 /* IO_PersonalListCell_iPhone.h */,
-				79FD50781A5BF0B100309364 /* IO_PersonalListCell_iPhone.m */,
+				79FD50771A5BF0B100309364 /* I0_PersonalListCell_iPhone.h */,
+				79FD50781A5BF0B100309364 /* I0_PersonalListCell_iPhone.m */,
 				79FD507A1A5BF0C700309364 /* I0_PersonalListCell_iPhone.xml */,
+				7978A7991A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.h */,
+				7978A79A1A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.m */,
+				7978A79C1A5D0BE20014A667 /* I0_PersonalListCellBody_iPhone.xml */,
 				79FD50621A5BDD1800309364 /* I0_TestListBoard_iPhone.h */,
 				79FD50631A5BDD1800309364 /* I0_TestListBoard_iPhone.m */,
 				79FD50651A5BDD3500309364 /* I0_TestListBoard_iPhone.xml */,
@@ -5240,7 +5248,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "geek-zoo studio";
+				ORGANIZATIONNAME = weited;
 				TargetAttributes = {
 					63249C9A1754E07900372FD7 = {
 						DevelopmentTeam = KFM795G7T9;
@@ -5424,6 +5432,7 @@
 				CB9C239418BB3B0C00DDA501 /* B2_ProductSpecifyBoard_iPhone.xml in Resources */,
 				CB9C235A18BB3B0C00DDA501 /* tuitional_img_2_2@2x.png in Resources */,
 				CB9C22F818BB3B0C00DDA501 /* item_grid_header_view_icon@2x.png in Resources */,
+				7978A79D1A5D0BE20014A667 /* I0_PersonalListCellBody_iPhone.xml in Resources */,
 				CB9C230218BB3B0C00DDA501 /* item_info_collection_btn@2x.png in Resources */,
 				1848BD8518B4D8690007238A /* item_cancel@2x.png in Resources */,
 				CB9C22C418BB3B0C00DDA501 /* button_blue@2x.png in Resources */,
@@ -6039,7 +6048,7 @@
 				E9F5E85419546EA900216A56 /* UIButton+BeeUILayout.m in Sources */,
 				CB9C229F18BB3B0C00DDA501 /* CommonTagListCell.m in Sources */,
 				E9F5E80319546EA900216A56 /* UIView+Animation.m in Sources */,
-				79FD50791A5BF0B100309364 /* IO_PersonalListCell_iPhone.m in Sources */,
+				79FD50791A5BF0B100309364 /* I0_PersonalListCell_iPhone.m in Sources */,
 				E9F5E82519546EA900216A56 /* Bee_UISwitch.m in Sources */,
 				E9F5E8B219546EA900216A56 /* Bee_Ticker.mm in Sources */,
 				CB9C22A318BB3B0C00DDA501 /* FormData.m in Sources */,
@@ -6090,6 +6099,7 @@
 				E9F5E95219546EAA00216A56 /* ServiceShare_Window.m in Sources */,
 				E9F5E89819546EA900216A56 /* Bee_Keychain.mm in Sources */,
 				E9F5E95519546EAA00216A56 /* ServiceShare_SinaWeibo.m in Sources */,
+				7978A79B1A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.m in Sources */,
 				CB81D27A18ABB3F000F277EA /* SearchKeywordsModel.m in Sources */,
 				E9F5E7E019546EA900216A56 /* UIViewController+LifeCycle.m in Sources */,
 				E9F5E89B19546EA900216A56 /* NSObject+BeeKeychain.mm in Sources */,

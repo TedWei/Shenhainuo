@@ -11,7 +11,7 @@
         <image class="list-bg"/>
         <label id="title2" class="list-title"></label>
     </row>
-    <list id="list2" class="col-md-6"/>
+
     <style type="text/css">
         #list {
         width:100%;
