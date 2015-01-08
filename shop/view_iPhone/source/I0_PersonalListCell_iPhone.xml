@@ -4,11 +4,11 @@
     <linear id="mask" class="container">
         <image id="bg" />
         <image id="image" class="category_image"/>
-        <label id="title" class="title"/>
+        <label id="title" class="title"></label>
     </linear>
     
     
-    <style>
+    <style type="text/css">
         
         .container {
         width: 100%;
@@ -23,7 +23,7 @@
         height: 80%;
         position: absolute;
         left: 10%;
-        top: 10%;
+        top: 2%;
         }
         
         
@@ -45,7 +45,7 @@
         width: 64%;
         height: 64%;
         left:18%;
-        top:18%;
+        top:9%;
         }
         
         #image{

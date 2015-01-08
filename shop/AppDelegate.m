@@ -123,9 +123,9 @@
 	weixin.config.appKey		= @"<Your weixinKey>";
 	
 	// 配置新浪
-	sweibo.config.appKey		= @"<Your sinaWeiboKey>";
-	sweibo.config.appSecret		= @"<Your sinaWeiboSecret>";
-	sweibo.config.redirectURI	= @"<Your sinaWeiboCallback>";
+	sweibo.config.appKey		= @"29894543";
+	sweibo.config.appSecret		= @"8cb17358d7ddc0f88ff556a4a7a5e387";
+	sweibo.config.redirectURI	= @"https://api.weibo.com/oauth2/default.html";
 	
 	// 配置腾讯
 	tweibo.config.appKey		= @"<Your tencentWeiboKey>";

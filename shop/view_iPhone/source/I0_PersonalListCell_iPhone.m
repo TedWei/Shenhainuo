@@ -27,16 +27,17 @@ SUPPORT_RESOURCE_LOADING( YES )
 
 - (void)dataDidChanged
 {
-    ORDER_GOODS * good = self.data;
     
-
-    if ( good )
+    SIMPLE_GOODS * goods = self.data;
+    
+    if ( goods )
     {
-        $(@"#title").TEXT( good.name );
-        $(@"#image").IMAGE( good.img.thumbURL );
+        $(@"#title").TEXT( goods.name );
+        $(@"#image").IMAGE( goods.img.thumbURL );
+        
+        NSLog(@"thumbnail content is %@",goods.img.thumbURL);
         
     }
-    
 }
 
 @end

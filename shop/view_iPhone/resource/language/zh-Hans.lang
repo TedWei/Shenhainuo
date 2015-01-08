@@ -98,7 +98,7 @@
 <string name="setting_website">官方网站</string>
 <string name="setting_tech">技术支持</string>
 <string name="setting_rate">应用评分</string>
-<string name="setting_geekzoo">Geek Zoo Studio</string>
+<string name="setting_support">语言、日期、版本信息</string>
 <string name="setting_about">关于应用</string>
 <string name="setting_sales">经销商</string>
 <string name="setting_logout">注销</string>

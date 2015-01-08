@@ -142,10 +142,12 @@ ON_SIGNAL2( BeeUIBoard, signal )
     else if ( [signal is:BeeUIBoard.DID_APPEAR] )
     {
 		[self.configModel reload];
-    }
-    else if ( [signal is:BeeUIBoard.DID_APPEAR] )
-    {
         [E0_ProfileBoard_iPhone sharedInstance];
+        if ([UserModel online] == YES) {
+            [bee.ui.router open:self.TAB_Personal animated:YES];
+        }else{
+            [bee.ui.router open:self.TAB_HOME animated:YES];
+        }
     }
     else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
     {

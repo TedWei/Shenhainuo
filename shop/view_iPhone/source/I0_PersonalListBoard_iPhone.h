@@ -16,7 +16,11 @@
 
 AS_OUTLET( BeeUIScrollView, list )
 
+AS_OUTLET( BeeUIScrollView, list2)
+
 AS_MODEL( OrderModel, orderModel)
+
+AS_MODEL( CategoryModel, categoryModel)
 
 
 

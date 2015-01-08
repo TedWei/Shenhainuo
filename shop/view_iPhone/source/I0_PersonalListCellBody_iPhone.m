@@ -28,14 +28,10 @@ SUPPORT_RESOURCE_LOADING( YES )
 
 - (void)dataDidChanged
 {
-    ORDER_GOODS * good = self.data;
+    ORDER_GOODS * goods = self.data;
     
-    if ( good )
-    {
-        $(@"#title").TEXT( good.name );
-        $(@"#image").IMAGE( good.img.thumbURL );
-        
-    }
+    $(@"#title").TEXT( goods.name );
+    $(@"#image").IMAGE( goods.img.thumbURL );
     
 }
 

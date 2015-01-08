@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 weited. All rights reserved.
 //
 
-#import "Bee_UICell.h"
+#import "Bee.h"
 
-@interface I0_PersonalListCellBody_iPhone : BeeUICell
+@interface I0_PersonalListCellBody_iPhone : BeeUIScrollView
 
 @end

@@ -61,7 +61,7 @@
         <col class="form-group">
             <row class="form single nextor">
                 <image class="background"/>
-                <label class="title">@{setting_geekzoo}</label>
+                <label class="title">@{setting_support}</label>
                 <image class="accessory"/>
                 <button class="mask" id="setting_geekzoo"/>
             </row>

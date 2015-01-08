@@ -11,12 +11,9 @@
         <image class="list-bg"/>
         <label id="title2" class="list-title"></label>
     </row>
-
+    <list id="list2" class="col-md-6"/>
     <style type="text/css">
-        #list {
-        width:100%;
-        height:40%;
-        }
+        
         
         #title {
         width:100%;
@@ -26,12 +23,17 @@
         #title2{
         width:100%;
         height:auto;
-        top:10px;
+        }
+        
+        #list {
+        width:100%;
+        height:35%;
         }
         
         #list2{
         width:100%;
-        height:40%;
+        height:35%;
+
         }
         
         .list-item{
