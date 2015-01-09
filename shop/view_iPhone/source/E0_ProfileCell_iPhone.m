@@ -46,7 +46,7 @@ SUPPORT_RESOURCE_LOADING( YES )
         
         if ( 0 == userModel.user.collection_num.intValue )
         {
-            $(@"#fav-count").TEXT( __TEXT(@"no_product") );
+           // $(@"#fav-count").TEXT( __TEXT(@"no_product") );
         }
         else
         {
@@ -98,7 +98,7 @@ SUPPORT_RESOURCE_LOADING( YES )
 		else
 		{
 			$(@"#finished-bg").HIDE();
-			$(@"#finished").HIDE();
+			//$(@"#finished").HIDE();
 		}
 		
 		if ( [UserModel online] )

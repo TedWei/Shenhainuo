@@ -20,11 +20,14 @@
 
 #import "UIViewController+ErrorTips.h"
 
+#import "ArticleGroupModel.h"
+
 #pragma mark -
 
 AS_UI( E0_ProfileBoard_iPhone, profile )
 
 @interface E0_ProfileBoard_iPhone : BaseBoard_iPhone<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
 
 AS_SINGLETON( E0_ProfileBoard_iPhone )
 

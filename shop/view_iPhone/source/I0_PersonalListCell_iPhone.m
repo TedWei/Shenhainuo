@@ -35,8 +35,6 @@ SUPPORT_RESOURCE_LOADING( YES )
         $(@"#title").TEXT( goods.name );
         $(@"#image").IMAGE( goods.img.thumbURL );
         
-        NSLog(@"thumbnail content is %@",goods.img.thumbURL);
-        
     }
 }
 

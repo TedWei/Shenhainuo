@@ -29,6 +29,8 @@
 #import "CommonPullLoader.h"
 #import "E0_ProfileHelpBoard_iPhone.h"
 
+#import "G3_HelpEntryBoard_iPhone.h"
+
 #pragma mark -
 
 DEF_UI( E0_ProfileBoard_iPhone, profile )
@@ -71,6 +73,7 @@ ON_CREATE_VIEWS( signal )
                   image:[UIImage imageNamed:@"profile_refresh_site_icon.png"]];
     
     @weakify(self);
+    
     
     self.list.headerClass = [CommonPullLoader class];
     self.list.headerShown = YES;
@@ -302,6 +305,25 @@ ON_SIGNAL3( E0_ProfileCell_iPhone, order_shipped, signal )
     
     [self.stack pushBoard:[E3_PendingReceivedBoard_iPhone board] animated:YES];
 }
+
+
+/**
+ * 个人中心-关于我们，点击事件触发时执行的操作
+ */
+ON_SIGNAL3( E0_ProfileCell_iPhone, about_us, signal )
+{
+    G3_HelpEntryBoard_iPhone * board = [G3_HelpEntryBoard_iPhone board];
+    
+    NSNumber *article_id=[NSNumber numberWithInt:5];
+    board.articlePageModel.article_id = article_id;
+    board.articlePageModel.article_title = __TEXT(@"about_us");
+
+    [self.stack pushBoard:board animated:YES];
+    
+}
+
+
+
 
 /**
  * 个人中心-历史订单，点击事件触发时执行的操作

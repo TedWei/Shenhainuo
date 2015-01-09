@@ -23,7 +23,7 @@
         height: 80%;
         position: absolute;
         left: 10%;
-        top: 2%;
+        top: 10%;
         }
         
         
@@ -45,7 +45,7 @@
         width: 64%;
         height: 64%;
         left:18%;
-        top:9%;
+        top:18%;
         }
         
         #image{

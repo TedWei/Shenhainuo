@@ -26,73 +26,73 @@
         
         <col class="scroll-wrapper">
             
-            <row class="bar-wrapper">
-                <image class="list-large-bg"/>
-                <col class="bar-item">
-                    <image class="bar-item-icon payment"/>
-                    <label class="bar-item-info" id="await_pay_label">@{profile_obligation}</label>
-                    <col class="badge-wrapper">
-                        <image id="await_pay-bg" class="badge-wrapper-bg"/>
-                        <label id="await_pay" class="bar-item-badge"></label>
-                    </col>
-                    <button id="order_await_pay" class="mask"/>
-                </col>
-                
-                <col class="bar-item">
-                    <image class="bar-item-icon ship" />
-                    <label class="bar-item-info" id="await_ship_label">@{profile_readyforshipment}</label>
-                    <col class="badge-wrapper">
-                        <image id="await_ship-bg" class="badge-wrapper-bg"/>
-                        <label id="await_ship" class="bar-item-badge"></label>
-                    </col>
-                    <button id="order_await_ship" class="mask"/>
-                </col>
-                
-                <col class="bar-item">
-                    <image class="bar-item-icon receipt"/>
-                    <label class="bar-item-info" id="shipped_label">@{profile_forthegoods}</label>
-                    <col class="badge-wrapper">
-                        <image id="shipped-bg" class="badge-wrapper-bg"/>
-                        <label id="shipped" class="bar-item-badge"></label>
-                    </col>
-                    <button id="order_shipped" class="mask"/>
-                </col>
-                
-                <col class="bar-item">
-                    <image class="bar-item-icon history"/>
-                    <label class="bar-item-info" id="finished_label">@{profile_history}</label>
-                    <col class="badge-wrapper">
-                        <image id="finished-bg" class="badge-wrapper-bg"/>
-                        <label id="finished" class="bar-item-badge"></label>
-                    </col>
-                    <button id="order_finished" class="mask"/>
-                </col>
-            </row>
-            
+<!--            <row class="bar-wrapper">-->
+<!--                <image class="list-large-bg"/>-->
+<!--                <col class="bar-item">-->
+<!--                    <image class="bar-item-icon payment"/>-->
+<!--                    <label class="bar-item-info" id="await_pay_label">@{profile_obligation}</label>-->
+<!--                    <col class="badge-wrapper">-->
+<!--                        <image id="await_pay-bg" class="badge-wrapper-bg"/>-->
+<!--                        <label id="await_pay" class="bar-item-badge"></label>-->
+<!--                    </col>-->
+<!--                    <button id="order_await_pay" class="mask"/>-->
+<!--                </col>-->
+<!--                -->
+<!--                <col class="bar-item">-->
+<!--                    <image class="bar-item-icon ship" />-->
+<!--                    <label class="bar-item-info" id="await_ship_label">@{profile_readyforshipment}</label>-->
+<!--                    <col class="badge-wrapper">-->
+<!--                        <image id="await_ship-bg" class="badge-wrapper-bg"/>-->
+<!--                        <label id="await_ship" class="bar-item-badge"></label>-->
+<!--                    </col>-->
+<!--                    <button id="order_await_ship" class="mask"/>-->
+<!--                </col>-->
+<!--                -->
+<!--                <col class="bar-item">-->
+<!--                    <image class="bar-item-icon receipt"/>-->
+<!--                    <label class="bar-item-info" id="shipped_label">@{profile_forthegoods}</label>-->
+<!--                    <col class="badge-wrapper">-->
+<!--                        <image id="shipped-bg" class="badge-wrapper-bg"/>-->
+<!--                        <label id="shipped" class="bar-item-badge"></label>-->
+<!--                    </col>-->
+<!--                    <button id="order_shipped" class="mask"/>-->
+<!--                </col>-->
+<!--                -->
+<!--                <col class="bar-item">-->
+<!--                    <image class="bar-item-icon history"/>-->
+<!--                    <label class="bar-item-info" id="finished_label">@{profile_history}</label>-->
+<!--                    <col class="badge-wrapper">-->
+<!--                        <image id="finished-bg" class="badge-wrapper-bg"/>-->
+<!--                        <label id="finished" class="bar-item-badge"></label>-->
+<!--                    </col>-->
+<!--                    <button id="order_finished" class="mask"/>-->
+<!--                </col>-->
+<!--            </row>-->
+
             <col class="list-wrapper">
                 
                 <row class="list-item">
                     <image class="list-bg"/>
+                    <label class="list-title">@{purchased_list}</label>
+                    <label id="finished" class="list-subtitle">0</label>
+                    <image class="list-indictor"/>
+                    <button id="order_finished" class="mask"/>
+                </row>
+                
+                <row class="list-item">
+                    <image class="list-bg"/>
                     <label class="list-title">@{collect_myfavorite}</label>
-                    <label id="fav-count" class="list-subtitle"></label>
+                    <label id="fav-count" class="list-subtitle">0</label>
                     <image class="list-indictor"/>
                     <button id="collection" class="mask"/>
                 </row>
                 
-                <!--row class="list-item">
-                 <image class="list-bg"/>
-                 <label class="list-title">@{profile_message}</label>
-                 <label class="list-subtitle">0</label>
-                 <image class="list-indictor"/>
-                 <button id="notification" class="mask"/>
-                 </row-->
-                
                 <row class="list-item">
                     <image class="list-bg"/>
-                    <label class="list-title">@{manage_address}</label>
+                    <label class="list-title">@{about_us}</label>
                     <label class="list-subtitle"></label>
                     <image class="list-indictor"/>
-                    <button id="manage" class="mask"/>
+                    <button id="about_us" class="mask"/>
                 </row>
                 
                 <row class="list-item">

@@ -164,7 +164,6 @@ ON_WILL_APPEAR( signal )
     
     [bee.ui.appBoard showTabbar];
     
-
 }
 
 ON_DID_APPEAR( signal )

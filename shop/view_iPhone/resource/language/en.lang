@@ -373,5 +373,7 @@
 <string name="specs_tips">Click on the select accessories and quantity</string>
 <string name="test_center">Test Center</string>
 <string name="purchased_list">Purchased</string>
+<string name="order_list">Order list</string>
+<string name="about_us">About us</string>
 <string name="personal_recommend">Recommend</string>
 </resources>

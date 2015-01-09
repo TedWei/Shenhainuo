@@ -372,6 +372,8 @@
 <string name="error_aps">无法开启推送通知，请前往系统设置中修改</string>
 <string name="specs_tips">点击选择配件和数量</string>
 <string name="test_center">测试中心</string>
-<string name="purchased_list">已购软件</string>
+<string name="purchased_list">我的软件</string>
+<string name="order_list">我的订单</string>
+<string name="about_us">关于我们</string>
 <string name="personal_recommend">推荐软件</string>
 </resources>

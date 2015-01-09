@@ -143,11 +143,6 @@ ON_SIGNAL2( BeeUIBoard, signal )
     {
 		[self.configModel reload];
         [E0_ProfileBoard_iPhone sharedInstance];
-        if ([UserModel online] == YES) {
-            [bee.ui.router open:self.TAB_Personal animated:YES];
-        }else{
-            [bee.ui.router open:self.TAB_HOME animated:YES];
-        }
     }
     else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
     {
@@ -194,7 +189,6 @@ ON_SIGNAL3( AppTabbar_iPhone, home_button, signal )
 {
 	[bee.ui.tabbar selectHome];
     if ([UserModel online] == YES) {
-
         [bee.ui.router open:AppBoard_iPhone.TAB_Personal animated:NO];
     }else{
 	    [bee.ui.router open:AppBoard_iPhone.TAB_HOME animated:NO];
@@ -231,7 +225,10 @@ ON_NOTIFICATION3( UserModel, KICKOUT, n )
 {
 	[self showLogin];
 	// 登录用户过期后，执行当前页面viewWillApper
+        
 	[bee.ui.router.currentBoard viewWillAppear:YES];
+    
+    
 }
 
 ON_NOTIFICATION3( UserModel, LOGOUT, n )

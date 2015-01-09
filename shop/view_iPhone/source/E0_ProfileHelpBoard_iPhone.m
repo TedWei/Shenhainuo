@@ -34,6 +34,8 @@ DEF_MODEL( ArticleGroupModel,	articleGroupModel )
 - (void)load
 {
     self.articleGroupModel = [ArticleGroupModel modelWithObserver:self];
+    
+    NSLog(@"content is %@",self.articleGroupModel.articleGroups);
 }
 
 - (void)unload
@@ -56,6 +58,7 @@ ON_CREATE_VIEWS( signal )
     
     self.list.lineCount = 1;
     self.list.animationDuration = 0.25f;
+    
     
     self.list.whenReloading = ^
     {
