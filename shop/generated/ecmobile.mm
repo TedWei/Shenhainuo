@@ -170,6 +170,7 @@ CONVERT_PROPERTY_CLASS( children, CATEGORY );
 @synthesize goods_weight = _goods_weight;
 @synthesize img = _img;
 @synthesize collected = _collected;
+@synthesize purchased = _purchased;
 @synthesize integral = _integral;
 @synthesize is_shipping = _is_shipping;
 @synthesize market_price = _market_price;
@@ -406,7 +407,7 @@ CONVERT_PROPERTY_CLASS( goods_list, ORDER_GOODS );
 
 @implementation COLLECT_GOODS
 
-@synthesize rec_id = _rec_id;
+@synthesize goods_id = _goods_id;
 @synthesize isEditing = _isEditing; // TODO:
 
 @end
@@ -1919,10 +1920,10 @@ DEF_MESSAGE_( user_collect_delete, msg )
 {
 	if ( msg.sending )
 	{
-		NSNumber * rec_id = msg.GET_INPUT( @"rec_id" );
+		NSNumber * goods_id = msg.GET_INPUT( @"goods_id" );
 		SESSION * session = msg.GET_INPUT( @"session" );
 
-		if ( nil == rec_id || NO == [rec_id isKindOfClass:[NSNumber class]] )
+		if ( nil == goods_id || NO == [goods_id isKindOfClass:[NSNumber class]] )
 		{
 			msg.failed = YES;
 			return;
@@ -1934,7 +1935,7 @@ DEF_MESSAGE_( user_collect_delete, msg )
 		}
 
 		NSMutableDictionary * requestBody = [NSMutableDictionary dictionary];
-		requestBody.APPEND( @"rec_id", rec_id );
+		requestBody.APPEND( @"goods_id", goods_id );
 		requestBody.APPEND( @"session", session );
 
 //		NSString * requestURI = @"http://shop.ecmobile.me/ecmobile/?url=user/collect/delete";

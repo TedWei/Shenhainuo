@@ -14,10 +14,15 @@
 
 #import "Bee.h"
 
+
+
 #pragma mark -
 
 /**
  * 商品详情页面底部Tabbar
  */
 @interface B2_ProductDetailTabCell_iPhone : BeeUICell
+
+
+AS_OUTLET( BeeUILabel, purchased)
 @end

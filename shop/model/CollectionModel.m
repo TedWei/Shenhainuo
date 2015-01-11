@@ -20,6 +20,7 @@
 
 @synthesize rec_id = _rec_id;
 @synthesize goods = _goods;
+@synthesize goods_id = _goods_id;
 
 - (void)load
 {
@@ -35,6 +36,7 @@
 	
 	self.goods = nil;
 	self.rec_id = nil;
+    self.goods_id = nil;
 }
 
 #pragma mark -
@@ -51,6 +53,7 @@
 {
 	self.goods = nil;
 	self.rec_id = nil;
+    self.goods_id = nil;
 	
 	self.index = 0;
 	self.total = 0;
@@ -106,13 +109,13 @@
 	self.MSG( API.user_collect_create ).INPUT( @"goods_id", goods.id );
 }
 
-- (void)uncollect:(COLLECT_GOODS *)goods
+- (void)uncollect:(GOODS *)goods
 {
 	if ( NO == [UserModel online] )
 		return;
 
 	self.CANCEL_MSG( API.user_collect_delete );
-	self.MSG( API.user_collect_delete ).INPUT( @"rec_id", goods.rec_id );
+	self.MSG( API.user_collect_delete ).INPUT( @"goods_id", goods.id );
 }
 
 #pragma mark -
@@ -188,11 +191,11 @@ ON_MESSAGE3( API, user_collect_delete, msg )
 			return;
 		}
 
-		NSNumber * rec_id = msg.GET_INPUT( @"rec_id" );
+		NSNumber * goods_id = msg.GET_INPUT( @"goods_id" );
 		
-		for ( COLLECT_GOODS * good in self.goods )
+		for ( GOODS * good in self.goods )
 		{
-			if ( [good.rec_id isEqualToNumber:rec_id] )
+			if ( [good.id isEqualToNumber:goods_id] )
 			{
 				[self.goods removeObject:good];
 				break;

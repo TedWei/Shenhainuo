@@ -20,9 +20,10 @@
 @interface CollectionModel : BeePagingViewModel
 
 @property (nonatomic, retain) NSNumber *		rec_id;
+@property (nonatomic, retain) NSNumber *        goods_id;
 @property (nonatomic, retain) NSMutableArray *	goods;
 
 - (void)collect:(GOODS *)goods;
-- (void)uncollect:(COLLECT_GOODS *)goods;
+- (void)uncollect:(GOODS *)goods;
 
 @end

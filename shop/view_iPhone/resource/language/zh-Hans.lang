@@ -197,7 +197,7 @@
 <string name="no_data">暂无数据</string>
 <string name="check_or_not">是否马上去历史订单查看？</string>
 <string name="use">兑换</string>
-<string name="share_blog">我在ECMobile上看到一件商品，感觉不错</string>
+<string name="share_blog">我在这里上看到一件商品，感觉不错</string>
 <string name="number">数目：</string>
 <string name="crash_log_analysis">崩溃日志分析</string>
 <string name="welcome">欢迎使用</string>
@@ -256,6 +256,7 @@
 <string name="add_to_cart_success">已加入购物车</string>
 <string name="session_expires_tips">登录过期，请重新登录</string>
 <string name="collection_success">收藏成功</string>
+<string name="collection_uncollect">取消收藏</string>
 <string name="remote_call_failed">无法拨打电话</string>
 <string name="confirm_install_hint">安装提示</string>
 <string name="confirm_install">为保证您的交易安全，需要您安装移动快捷支付，才能进行付款。\n\n点击确定，立即安装。</string>
@@ -373,6 +374,7 @@
 <string name="specs_tips">点击选择配件和数量</string>
 <string name="test_center">测试中心</string>
 <string name="purchased_list">我的软件</string>
+<string name="purchased_product">已购软件</string>
 <string name="order_list">我的订单</string>
 <string name="about_us">关于我们</string>
 <string name="personal_recommend">推荐软件</string>

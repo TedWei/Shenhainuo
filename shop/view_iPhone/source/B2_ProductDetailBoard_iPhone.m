@@ -61,8 +61,10 @@ DEF_MODEL( CollectionModel,	collectionModel )
 	self.goodsModel = [GoodsInfoModel modelWithObserver:self];
 	self.collectionModel = [CollectionModel modelWithObserver:self];
     
+    
     self.specs = [NSMutableArray array];
     self.count = @(1);
+    
 }
 
 
@@ -81,8 +83,7 @@ ON_CREATE_VIEWS( signal )
 {
     self.navigationBarTitle = __TEXT(@"gooddetail_product");
     self.navigationBarShown = YES;
-    self.navigationBarLeft  = [UIImage imageNamed:@"nav_back.png"];;
-	self.navigationBarRight = [UIImage imageNamed:@"item_info_header_share_icon.png"];
+    self.navigationBarLeft  = [UIImage imageNamed:@"nav_back.png"];
 
     self.specfied = @(NO);
 
@@ -129,6 +130,7 @@ ON_CREATE_VIEWS( signal )
             item.data = data;
             item.size = CGSizeAuto; 
             item.rule = BeeUIScrollLayoutRule_Tile;
+            
         }
     };
 
@@ -143,6 +145,7 @@ ON_CREATE_VIEWS( signal )
 	[self observeNotification:CartModel.UPDATED];
 }
 
+
 ON_DELETE_VIEWS( signal )
 {
     [self unobserveNotification:CartModel.UPDATED];
@@ -150,26 +153,32 @@ ON_DELETE_VIEWS( signal )
 
 ON_LAYOUT_VIEWS( signal )
 {
+
 }
 
 ON_WILL_APPEAR( signal )
 {
 	[self.goodsModel reload];
 	[self.cartModel reload];
+    
 
 	[bee.ui.appBoard hideLogin];
 	[bee.ui.appBoard hideTabbar];
 
 	[self.list reloadData];
+    
+    
 }
 
 ON_DID_APPEAR( signal )
 {
-	
+    
+    
 	ALIAS( bee.services.share.weixin,		weixin );
 	ALIAS( bee.services.share.tencentweibo,	tweibo );
 	ALIAS( bee.services.share.sinaweibo,	sweibo );
-
+    
+    
 	if ( sweibo.ready || tweibo.ready || weixin.ready )
 	{
 		self.navigationBarRight = [UIImage imageNamed:@"item_info_header_share_icon.png"];
@@ -178,6 +187,8 @@ ON_DID_APPEAR( signal )
 	{
 		self.navigationBarRight = nil;
 	}
+    
+    
 }
 
 ON_WILL_DISAPPEAR( signal )
@@ -255,7 +266,7 @@ ON_RIGHT_BUTTON_TOUCHED( signal )
 
 ON_SIGNAL3( B2_ProductDetailBoard_iPhone, SHARE_TO_SINA, signal )
 {
-    NSString * text = __TEXT(@"share_blog");				// self.goodsModel.goods.goods_name
+    NSString * text =[self.goodsModel.goods.goods_name stringByAppendingString:__TEXT(@"share_blog")];				// __TEXT(@"share_blog")
     NSString * imageUrl = self.goodsModel.goods.img.thumb;
     NSObject * image = [[BeeImageCache sharedInstance] imageForURL:imageUrl];
 //	NSString * title = self.goodsModel.goods.goods_name;	// __TEXT(@"ecmobile")
@@ -269,7 +280,9 @@ ON_SIGNAL3( B2_ProductDetailBoard_iPhone, SHARE_TO_SINA, signal )
     }
 
 	sweibo.post.text = text;
-	sweibo.post.url = [[ConfigModel sharedInstance].config.goods_url stringByAppendingFormat:@"%@",self.goodsModel.goods_id];
+//	sweibo.post.url = [[ConfigModel sharedInstance].config.goods_url stringByAppendingFormat:@"%@",self.goodsModel.goods_id];
+    
+    sweibo.post.url = [ConfigModel sharedInstance].config.site_url;
 
 	@weakify(self);
 	
@@ -297,7 +310,8 @@ ON_SIGNAL3( B2_ProductDetailBoard_iPhone, SHARE_TO_SINA, signal )
 
 ON_SIGNAL3( B2_ProductDetailBoard_iPhone, SHARE_TO_TENCENT, signal )
 {
-    NSString * text = __TEXT(@"share_blog");				// self.goodsModel.goods.goods_name
+   // NSString * text = __TEXT(@"share_blog");				// self.goodsModel.goods.goods_name
+    NSString * text =[self.goodsModel.goods.goods_name stringByAppendingString:__TEXT(@"share_blog")];				// __TEXT(@"share_blog")
     NSString * imageUrl = self.goodsModel.goods.img.thumb;
     NSObject * image = [[BeeImageCache sharedInstance] imageForURL:imageUrl];
 //    NSString * title = self.goodsModel.goods.goods_name;	// __TEXT(@"ecmobile")
@@ -311,7 +325,9 @@ ON_SIGNAL3( B2_ProductDetailBoard_iPhone, SHARE_TO_TENCENT, signal )
     }
     
 	tweibo.post.text = text;
-	tweibo.post.url = [[ConfigModel sharedInstance].config.goods_url stringByAppendingFormat:@"%@",self.goodsModel.goods_id];
+	//tweibo.post.url = [[ConfigModel sharedInstance].config.goods_url stringByAppendingFormat:@"%@",self.goodsModel.goods_id];
+    
+    tweibo.post.url = [ConfigModel sharedInstance].config.site_url;
     
 	@weakify(self);
 	
@@ -515,8 +531,12 @@ ON_SIGNAL3( B2_ProductDetailTabCell_iPhone, favorite, signal )
 		BeeUIButton * button = (BeeUIButton *)signal.source;
 		if ( button.selected )
 		{
-			[self presentFailureTips:__TEXT(@"favorite_added")];
-			return;
+
+            if (self.goodsModel.goods)
+            {
+                [self.collectionModel uncollect:self.goodsModel.goods];
+            }
+            
 		}
 		else
 		{
@@ -710,11 +730,15 @@ ON_NOTIFICATION3( CartModel, UPDATED, n )
 	{
 		count += goods.goods_number.intValue;
 	}
-
+    
 	_tabbar.data = __INT( count );
 }
 
 #pragma mark -
+
+
+#pragma mark -
+
 
 ON_MESSAGE3( API, goods, msg )
 {
@@ -749,6 +773,17 @@ ON_MESSAGE3( API, goods, msg )
 				{
 					$(_tabbar).FIND(@"#favorite").UNSELECT();
 				}
+                
+                if (self.goodsModel.goods.purchased && self.goodsModel.goods.purchased.boolValue)
+                {
+                    $(_tabbar).FIND(@"#purchased").SHOW();
+                }
+                else
+                {
+                    $(_tabbar).FIND(@"#add").SHOW();
+                    $(_tabbar).FIND(@"#buy").SHOW();
+                }
+                
 			}
 			
 			[self.list asyncReloadData];
@@ -809,6 +844,7 @@ ON_MESSAGE3( API, user_collect_delete, msg )
 		
 		if ( status && status.succeed.boolValue )
 		{
+            [self presentSuccessTips:__TEXT(@"collection_uncollect")];
 			$(_tabbar).FIND(@"#favorite").UNSELECT();
 		}
 	}

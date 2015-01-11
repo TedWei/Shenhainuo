@@ -218,6 +218,7 @@ ON_SIGNAL3( E0_ProfileBoard_iPhone, PHOTO_REMOVE, signal )
     
     [[UserModel sharedInstance] setAvatar:nil];
     
+    
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -267,6 +268,22 @@ ON_SIGNAL3( E0_ProfileCell_iPhone, manage, signal )
 /**
  * 个人中心-待付款，点击事件触发时执行的操作
  */
+ON_SIGNAL3( E0_ProfileCell_iPhone, order_list, signal )
+{
+    if ( NO == [UserModel online] )
+    {
+        [bee.ui.appBoard showLogin];
+        return;
+    }
+    
+    [self.stack pushBoard:[E1_PendingPaymentBoard_iPhone board] animated:YES];
+}
+
+
+
+/**
+ * 个人中心-待付款，点击事件触发时执行的操作
+ */
 ON_SIGNAL3( E0_ProfileCell_iPhone, order_await_pay, signal )
 {
     if ( NO == [UserModel online] )
@@ -307,6 +324,8 @@ ON_SIGNAL3( E0_ProfileCell_iPhone, order_shipped, signal )
 }
 
 
+
+
 /**
  * 个人中心-关于我们，点击事件触发时执行的操作
  */
@@ -329,6 +348,21 @@ ON_SIGNAL3( E0_ProfileCell_iPhone, about_us, signal )
  * 个人中心-历史订单，点击事件触发时执行的操作
  */
 ON_SIGNAL3( E0_ProfileCell_iPhone, order_finished, signal )
+{
+    if ( NO == [UserModel online] )
+    {
+        [bee.ui.appBoard showLogin];
+        return;
+    }
+    
+    [self.stack pushBoard:[E4_HistoryBoard_iPhone board] animated:YES];
+}
+
+
+/**
+ * 个人中心-Order List，点击事件触发时执行的操作
+ */
+ON_SIGNAL3( E0_ProfileCell_iPhone, order_purchased, signal )
 {
     if ( NO == [UserModel online] )
     {

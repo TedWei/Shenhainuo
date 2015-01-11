@@ -13,6 +13,7 @@
 //
 
 #import "D0_SearchInput_iPhone.h"
+#import "bee.services.siri.h"
 
 #pragma mark -
 
@@ -23,6 +24,9 @@ SUPPORT_RESOURCE_LOADING( YES )
 
 - (void)load
 {
+//    ALIAS( bee.services.siri, siri);
+    
+
 }
 
 - (void)unload

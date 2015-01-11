@@ -111,26 +111,26 @@
 
 - (void)updateConfig
 {
-	ALIAS( bee.services.share.weixin,		weixin );
-	ALIAS( bee.services.share.tencentweibo,	tweibo );
-	ALIAS( bee.services.share.sinaweibo,	sweibo );
+	//ALIAS( bee.services.share.weixin,		weixin );
+	//ALIAS( bee.services.share.tencentweibo,	tweibo );
+	//ALIAS( bee.services.share.sinaweibo,	sweibo );
 	ALIAS( bee.services.alipay,				alipay );
 	ALIAS( bee.services.siri,				siri );
 	ALIAS( bee.services.location,			lbs );
 
 	// 配置微信
-	weixin.config.appId			= @"<Your weixinID>";
-	weixin.config.appKey		= @"<Your weixinKey>";
+//	weixin.config.appId			= @"<Your weixinID>";
+//	weixin.config.appKey		= @"<Your weixinKey>";
 	
 	// 配置新浪
-	sweibo.config.appKey		= @"29894543";
-	sweibo.config.appSecret		= @"8cb17358d7ddc0f88ff556a4a7a5e387";
-	sweibo.config.redirectURI	= @"https://api.weibo.com/oauth2/default.html";
+//	sweibo.config.appKey		= @"29894543";
+//	sweibo.config.appSecret		= @"8cb17358d7ddc0f88ff556a4a7a5e387";
+//	sweibo.config.redirectURI	= @"https://api.weibo.com/oauth2/default.html";
 	
 	// 配置腾讯
-	tweibo.config.appKey		= @"<Your tencentWeiboKey>";
-	tweibo.config.appSecret		= @"<Your tencentWeiboSecret>";
-	tweibo.config.redirectURI	= @"<Your tencentWeiboCallback>";
+//	tweibo.config.appKey		= @"<Your tencentWeiboKey>";
+//	tweibo.config.appSecret		= @"<Your tencentWeiboSecret>";
+//	tweibo.config.redirectURI	= @"<Your tencentWeiboCallback>";
 	
 	// 配置支付宝
 	alipay.config.parnter		= @"<Your alipayPartnerID>";
@@ -141,8 +141,8 @@
 	alipay.config.wapCallBackURL	= @"<Your alipayWapURL>";
 
 	// 配置语音识别
-	siri.config.showUI			= NO;
-	siri.config.appID			= @"<Your iflyKey>";
+	//siri.config.showUI			= NO;
+	//siri.config.appID			= @"54af7cd2";
 
 	// 配置友盟
 	[MobClick setAppVersion:[BeeSystemInfo appShortVersion]];
@@ -152,7 +152,7 @@
 	[MobClick startWithAppkey:@"<Your umengKey>" reportPolicy:BATCH channelId:nil];
 	
 	// 配置快递100
-	[ExpressModel setKuaidi100Key:@"<Your kuaidi100Key>"];
+	//[ExpressModel setKuaidi100Key:@"<Your kuaidi100Key>"];
 }
 
 @end

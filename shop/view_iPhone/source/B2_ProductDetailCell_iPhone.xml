@@ -49,21 +49,21 @@
             </row>
             
             <row class="list-row">
-                <image class="bg list-group-body"/>
+                <image class="bg list-group-footer"/>
                 <label class="list-title">@{gooddetail_description}</label>
                 <label class="list-subtitle" id="info-2"></label>
                 <image class="list-indictor"/>
                 <button id="detail" class="fill"></button>
             </row>
             
-            <row class="list-row">
-                <image class="bg list-group-footer"/>
-                <label class="list-title">@{gooddetail_commit}</label>
-                <label class="list-subtitle" id="info-3"></label>
-                <image class="list-indictor"/>
-                <button id="comment" class="fill"></button>
-            </row>
-            
+<!--            <row class="list-row">-->
+<!--                <image class="bg list-group-footer"/>-->
+<!--                <label class="list-title">@{gooddetail_commit}</label>-->
+<!--                <label class="list-subtitle" id="info-3"></label>-->
+<!--                <image class="list-indictor"/>-->
+<!--                <button id="comment" class="fill"></button>-->
+<!--            </row>-->
+
         </col>
         
     </col>

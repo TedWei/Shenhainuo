@@ -62,7 +62,7 @@ SUPPORT_RESOURCE_LOADING( YES )
 		else
 		{
 			$(@"#await_pay-bg").HIDE();
-			$(@"#await_pay").HIDE();
+			//$(@"#await_pay").HIDE();
 		}
         
 		NSNumber * num2 = [[userModel.user.order_num objectAtPath:@"await_ship"] asNSNumber];
@@ -94,6 +94,8 @@ SUPPORT_RESOURCE_LOADING( YES )
 		{
 			$(@"#finished-bg").SHOW();
 			$(@"#finished").SHOW().DATA( num4 );
+            $(@"#purchased").SHOW().DATA( num4 );
+            
 		}
 		else
 		{

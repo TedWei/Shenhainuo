@@ -220,6 +220,7 @@ enum RANK_LEVEL
 @property (nonatomic, retain) NSString *		goods_weight;
 @property (nonatomic, retain) PHOTO *           img;
 @property (nonatomic, retain) NSNumber *		collected;
+@property (nonatomic, retain) NSNumber *        purchased;
 @property (nonatomic, retain) NSNumber *		integral;
 @property (nonatomic, retain) NSNumber *		is_shipping;
 @property (nonatomic, retain) NSString *		market_price;
@@ -405,7 +406,7 @@ enum RANK_LEVEL
 @property (nonatomic, retain) NSNumber *		id;
 @end
 
-@interface COLLECT_GOODS : SIMPLE_GOODS
+@interface COLLECT_GOODS : GOODS
 @property (nonatomic, retain) NSNumber *		rec_id;
 @property (nonatomic, retain) NSNumber *        goods_id;
 @property (nonatomic, retain) NSString *		name;

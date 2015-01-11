@@ -62,6 +62,8 @@
 		6324A4231754FC7700372FD7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A4151754FC7700372FD7 /* SystemConfiguration.framework */; };
 		6324A4241754FC7700372FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A4161754FC7700372FD7 /* UIKit.framework */; };
 		6324A91E1755AA8300372FD7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A91D1755AA8300372FD7 /* AudioToolbox.framework */; };
+		7916C37A1A5F820600A4582F /* I1_OrderListBoard_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7916C3791A5F820600A4582F /* I1_OrderListBoard_iPhone.m */; };
+		7916C37C1A5FB92600A4582F /* searcher_new_search_box_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7916C37B1A5FB92600A4582F /* searcher_new_search_box_2@2x.png */; };
 		7978A79B1A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978A79A1A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.m */; };
 		7978A79D1A5D0BE20014A667 /* I0_PersonalListCellBody_iPhone.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7978A79C1A5D0BE20014A667 /* I0_PersonalListCellBody_iPhone.xml */; };
 		79F18F431A21CC0A00AA1CE4 /* bee.services.liveload.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F18F361A21CC0A00AA1CE4 /* bee.services.liveload.m */; };
@@ -996,6 +998,9 @@
 		6324A4151754FC7700372FD7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6324A4161754FC7700372FD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6324A91D1755AA8300372FD7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7916C3781A5F820600A4582F /* I1_OrderListBoard_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I1_OrderListBoard_iPhone.h; sourceTree = "<group>"; };
+		7916C3791A5F820600A4582F /* I1_OrderListBoard_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I1_OrderListBoard_iPhone.m; sourceTree = "<group>"; };
+		7916C37B1A5FB92600A4582F /* searcher_new_search_box_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searcher_new_search_box_2@2x.png"; sourceTree = "<group>"; };
 		7978A7991A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I0_PersonalListCellBody_iPhone.h; sourceTree = "<group>"; };
 		7978A79A1A5D0BCF0014A667 /* I0_PersonalListCellBody_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I0_PersonalListCellBody_iPhone.m; sourceTree = "<group>"; };
 		7978A79C1A5D0BE20014A667 /* I0_PersonalListCellBody_iPhone.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = I0_PersonalListCellBody_iPhone.xml; sourceTree = "<group>"; };
@@ -2968,6 +2973,7 @@
 		CB9C20B718BB3B0900DDA501 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7916C37B1A5FB92600A4582F /* searcher_new_search_box_2@2x.png */,
 				79FD50701A5BE55100309364 /* round_rectangle@3x.png */,
 				79FD50671A5BE01200309364 /* footer_test_active_icon@2x.png */,
 				79FD50681A5BE01200309364 /* footer_test_icon@2x.png */,
@@ -3171,6 +3177,8 @@
 		CB9C216D18BB3B0A00DDA501 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				7916C3781A5F820600A4582F /* I1_OrderListBoard_iPhone.h */,
+				7916C3791A5F820600A4582F /* I1_OrderListBoard_iPhone.m */,
 				79FD50721A5BE78C00309364 /* I0_PersonalListBoard_iPhone.h */,
 				79FD50731A5BE78C00309364 /* I0_PersonalListBoard_iPhone.m */,
 				79FD50751A5BEA3300309364 /* I0_PersonalListBoard_iPhone.xml */,
@@ -5601,6 +5609,7 @@
 				CB9C232518BB3B0C00DDA501 /* searcher_new_search_icon@2x.png in Resources */,
 				CB9C233118BB3B0C00DDA501 /* shopping_cart_body_bg_02@2x.png in Resources */,
 				E9F5E98019546EAA00216A56 /* ServiceWizard_Board.xml in Resources */,
+				7916C37C1A5FB92600A4582F /* searcher_new_search_box_2@2x.png in Resources */,
 				CB60E56C179E2B360094F91C /* icon@2x.png in Resources */,
 				CB9C22E918BB3B0C00DDA501 /* item_graph_header_view_icon@2x.png in Resources */,
 				CB9C233418BB3B0C00DDA501 /* shopping_cart_body_dotted_line@2x.png in Resources */,
@@ -5740,6 +5749,7 @@
 				CB9C241918BB3B0C00DDA501 /* F3_RegionPickCell_iPhone.m in Sources */,
 				CB9C23A318BB3B0C00DDA501 /* B5_ProductCommentCell_iPhone.m in Sources */,
 				CB81D27B18ABB3F000F277EA /* SearchModel.m in Sources */,
+				7916C37A1A5F820600A4582F /* I1_OrderListBoard_iPhone.m in Sources */,
 				E9F5E7DA19546EA900216A56 /* BeeUIBoard+Popover.m in Sources */,
 				CB81D26918ABB3F000F277EA /* ConfigModel.m in Sources */,
 				E9F5E90219546EA900216A56 /* CXMLNode_PrivateExtensions.m in Sources */,

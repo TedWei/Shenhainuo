@@ -9,20 +9,20 @@
             <input id="search-input" placeholder="@{search_input}"></input>
         </row>
         
-        <button id="open" class="search-voice-button"/>
-        
+<!--        <button id="open" class="search-voice-button"/>-->
+
     </row>
     
     <style>
         .container {
-        width: 318px;
+        width: 100%;
         height: 100%;
         v-align: center;
         margin-left: 1px;
         }
         
         .search-input-wrapper {
-        width: 250px;
+        width: 100%;
         height: 29px;
         v-align: center;
         }
@@ -35,7 +35,7 @@
         }
         
         #search-input {
-        width: 225px;
+        width: 275px;
         height: 100%;
         font-size: 14px;
         margin-left: 5px;
@@ -46,10 +46,10 @@
         .search-input-bg {
         top: 0;
         left: 0;
-        width: 250px;
+        width: 100%;
         height: 29px;
         position: absolute;
-        image-src: url(searcher_new_search_box.png);
+        image-src: url(searcher_new_search_box_2.png);
         image-mode: fit;
         }
         

@@ -256,6 +256,7 @@
 <string name="add_to_cart_success">Added to cart</string>
 <string name="session_expires_tips">For safety reason, please signin again</string>
 <string name="collection_success">Added to collection</string>
+<string name="collection_uncollect">Canceled to collection</string>
 <string name="remote_call_failed">Cannot call number</string>
 <string name="confirm_install_hint">Installation notes</string>
 <string name="confirm_install">To ensure the safety of your transaction, you need to  install alipay to make a payment.  Click OK to install it now.</string>
@@ -373,6 +374,7 @@
 <string name="specs_tips">Click on the select accessories and quantity</string>
 <string name="test_center">Test Center</string>
 <string name="purchased_list">Purchased</string>
+<string name="purchased_product">Purchased</string>
 <string name="order_list">Order list</string>
 <string name="about_us">About us</string>
 <string name="personal_recommend">Recommend</string>
