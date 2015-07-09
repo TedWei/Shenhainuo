@@ -79,6 +79,8 @@ DEF_MODEL( UserModel,	userModel )
 {
 	self.configModel = [ConfigModel modelWithObserver:self];
 	self.userModel = [UserModel modelWithObserver:self];
+    
+    
 }
 
 - (void)unload

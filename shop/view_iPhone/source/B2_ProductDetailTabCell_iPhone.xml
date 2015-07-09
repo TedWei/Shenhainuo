@@ -8,7 +8,7 @@
 		<button id="buy" class="btn button-orange">@{gooddetail_buy}</button>
         <button id="add" class="btn button-red">@{gooddetail_shoppingcart}</button>
         
-        <label id="purchased" class="purchased" />
+        <label id="purchased" class="purchased">@{purchased_product}</label>
 		
         <col class="cart-wrapper">
             <button id="cart" class="cart-icon"/>
@@ -52,11 +52,12 @@
         font-weight:bold;
         text-align:center;
         color: black;
-        width: 172px;
+        width: 0px;
         height: 28px;
         line-height: 28px;
         margin-left: 23px;
         margin-right: 23px;
+
         }
         
         .button-star {
@@ -152,10 +153,20 @@
 		
         #buy {
         margin-left: 26px;
+<!--        left:50px;-->
+<!--        position:absolute;-->
         }
         
         #add {
         margin-left: 20px;
+<!--        left:50px;-->
+<!--        position:absolute;-->
+        }
+        
+        #purchased{
+        left:50px;
+        top:9px;
+        position:absolute;
         }
         
     </style>

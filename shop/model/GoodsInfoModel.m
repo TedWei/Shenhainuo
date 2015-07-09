@@ -35,16 +35,19 @@
 
 - (void)loadCache
 {
+//    NSLog(@"goods DB is %@,_goods.DB");
 }
 
 - (void)saveCache
 {
+    
 }
 
 - (void)clearCache
 {
 	self.goods_id = nil;
 	self.goods = nil;
+
 
 	self.loaded = NO;
 }

@@ -25,19 +25,19 @@
             </row>
         </col>
         <!-- 账号管理 -->
-        <label class="form-group-caption">@{setting_account}</label>
-        <col class="form-group">
-            <row class="form switch">
-                <image class="background"/>
-                <label class="title">@{sina_weibo}</label>
-                <switch class="switchr" id="sina_weibo"/>
-            </row>
-            <row class="form switch">
-                <image class="background"/>
-                <label class="title">@{tencent_weibo}</label>
-                <switch class="switchr" id="tencent_weibo"/>
-            </row>
-        </col>
+<!--        <label class="form-group-caption" id="setting_account">@{setting_account}</label>-->
+<!--        <col class="form-group" id="">-->
+<!--            <row class="form switch" id="sina_weibo_view">-->
+<!--                <image class="background"/>-->
+<!--                <label class="title">@{sina_weibo}</label>-->
+<!--                <switch class="switchr" id="sina_weibo"/>-->
+<!--            </row>-->
+<!--            <row class="form switch" id="ten_weibo_view">-->
+<!--                <image class="background"/>-->
+<!--                <label class="title">@{tencent_weibo}</label>-->
+<!--                <switch class="switchr" id="tencent_weibo"/>-->
+<!--            </row>-->
+<!--        </col>-->
         <!-- 官方信息 -->
         <label class="form-group-caption">@{setting_official}</label>
         <col class="form-group">
@@ -59,12 +59,24 @@
         <!-- 技术支持 -->
         <label class="form-group-caption">@{setting_tech}</label>
         <col class="form-group">
-            <row class="form single nextor">
+        <row class="form nextor first">
+            <image class="background"/>
+            <label class="title">@{setting_feedback}</label>
+            <image class="accessory"/>
+            <button class="mask" id="setting_feedback"/>
+        </row>
+        <row class="form nextor middle">
+            <image class="background"/>
+            <label class="title">@{setting_rate}</label>
+            <image class="accessory"/>
+            <button class="mask" id="setting_rate"/>
+        </row>
+        <row class="form nextor last">
                 <image class="background"/>
                 <label class="title">@{setting_support}</label>
                 <image class="accessory"/>
                 <button class="mask" id="setting_geekzoo"/>
-            </row>
+        </row>
         </col>
         <col class="form-group">
             <row class="form custom">

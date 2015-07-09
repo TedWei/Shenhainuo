@@ -22,6 +22,8 @@ DEF_SINGLETON( ArticleGroupModel )
 
 @synthesize articleGroups = _articleGroups;
 
+@synthesize category = _category;
+
 - (void)load
 {
 	self.articleGroups = [NSMutableArray array];
@@ -62,11 +64,19 @@ DEF_SINGLETON( ArticleGroupModel )
 
 - (void)reload
 {
-	self.CANCEL_MSG( API.shopHelp );
-	self.MSG( API.shopHelp );
+    if ([self.category isEqualToString:@"shopHelp"])
+    {
+        self.CANCEL_MSG( API.shopHelp );
+        self.MSG( API.shopHelp );
+    }
+    else if ([self.category isEqualToString:@"aboutUs"])
+    {
+        self.CANCEL_MSG (API.aboutUs );
+        self.MSG( API.aboutUs );
+    }
 }
 
-#pragma mark -
+#pragma mark -  shopHelp
 
 ON_MESSAGE3( API, shopHelp, msg )
 {
@@ -86,6 +96,28 @@ ON_MESSAGE3( API, shopHelp, msg )
 		
 		[self saveCache];
 	}
+}
+
+#pragma mark -  shopHelp
+
+ON_MESSAGE3( API, aboutUs, msg )
+{
+    if ( msg.succeed )
+    {
+        STATUS * status = msg.GET_OUTPUT( @"status" );
+        if ( NO == status.succeed.boolValue )
+        {
+            msg.failed = YES;
+            return;
+        }
+        
+        [self.articleGroups removeAllObjects];
+        [self.articleGroups addObjectsFromArray:msg.GET_OUTPUT(@"data")];
+        
+        self.loaded = YES;
+        
+        [self saveCache];
+    }
 }
 
 @end

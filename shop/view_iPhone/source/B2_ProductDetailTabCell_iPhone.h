@@ -24,5 +24,4 @@
 @interface B2_ProductDetailTabCell_iPhone : BeeUICell
 
 
-AS_OUTLET( BeeUILabel, purchased)
 @end

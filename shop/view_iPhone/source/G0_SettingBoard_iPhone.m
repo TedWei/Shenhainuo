@@ -138,7 +138,7 @@ ON_SIGNAL3( G0_SettingCell_iPhone, setting_feedback, signal )
 {
 		UMFeedbackViewController * vc = [[UMFeedbackViewController alloc] initWithNibName:@"UMFeedbackViewController" bundle:nil];
 #warning Config Your UMengkey
-		vc.appkey = @"<Your umengKey>";
+		vc.appkey = @"54b39602fd98c59468000d58";
 		
 		UINavigationController * nav = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
 		[self presentModalViewController:nav animated:YES];
@@ -146,7 +146,7 @@ ON_SIGNAL3( G0_SettingCell_iPhone, setting_feedback, signal )
 
 ON_SIGNAL3( G0_SettingCell_iPhone, setting_rate, signal )
 {
-    NSString *	link = @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=551560576";
+    NSString *	link = @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=945334730";
     NSURL *		url = [NSURL URLWithString:link];
 
     if ( [[UIApplication sharedApplication] canOpenURL:url] )
@@ -183,6 +183,7 @@ ON_SIGNAL3( G0_SettingCell_iPhone, setting_geekzoo, signal )
 ON_SIGNAL3( G0_SettingCell_iPhone, sina_weibo, signal )
 {
 	ALIAS( bee.services.share.sinaweibo, sweibo );
+    
 	
 	BeeUISwitch * switchr = (BeeUISwitch *)signal.sourceView;
 	if ( switchr.on )

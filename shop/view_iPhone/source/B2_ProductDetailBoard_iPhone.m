@@ -131,8 +131,29 @@ ON_CREATE_VIEWS( signal )
             item.size = CGSizeAuto; 
             item.rule = BeeUIScrollLayoutRule_Tile;
             
+            
+            
+            if (self.goodsModel.goods.purchased && self.goodsModel.goods.purchased.boolValue)
+            {
+                [$(_tabbar).FIND(@"#add").view removeFromSuperview];
+                [$(_tabbar).FIND(@"#buy").view removeFromSuperview];
+                
+                $(_tabbar).FIND(@"#purchased").view.width=172;
+                
+            }
+            else
+            {
+                [$(_tabbar).FIND(@"#purchased").view removeFromSuperview];
+            }
+
+            
         }
+        
+
     };
+    
+    
+    
 
     self.list.whenHeaderRefresh = ^
     {
@@ -774,19 +795,10 @@ ON_MESSAGE3( API, goods, msg )
 					$(_tabbar).FIND(@"#favorite").UNSELECT();
 				}
                 
-                if (self.goodsModel.goods.purchased && self.goodsModel.goods.purchased.boolValue)
-                {
-                    $(_tabbar).FIND(@"#purchased").SHOW();
-                }
-                else
-                {
-                    $(_tabbar).FIND(@"#add").SHOW();
-                    $(_tabbar).FIND(@"#buy").SHOW();
-                }
-                
 			}
 			
 			[self.list asyncReloadData];
+            
 		}
 		else
 		{

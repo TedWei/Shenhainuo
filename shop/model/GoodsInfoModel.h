@@ -17,9 +17,12 @@
 
 #pragma mark -
 
+
 @interface GoodsInfoModel : BeeOnceViewModel
 
 @property (nonatomic, retain) NSNumber *        goods_id;
 @property (nonatomic, retain) GOODS *           goods;
 
 @end
+
+

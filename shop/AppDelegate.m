@@ -55,19 +55,19 @@
 	[ServerConfig sharedInstance].url = @"http://120.24.79.27/ecmobile/?url=";
 
 	// 配置闪屏
-	bee.services.wizard.config.showBackground = YES;
-	bee.services.wizard.config.showPageControl = YES;
-	bee.services.wizard.config.backgroundImage = [UIImage imageNamed:@"tuitional_bg.jpg"];
-	bee.services.wizard.config.pageDotSize = CGSizeMake( 11.0f, 11.0f );
-	bee.services.wizard.config.pageDotNormal = [UIImage imageNamed:@"tuitional-carousel-active-btn.png"];
-	bee.services.wizard.config.pageDotHighlighted = [UIImage imageNamed:@"tuitional-carousel-btn.png"];
-	bee.services.wizard.config.pageDotLast = [UIImage imageNamed:@"tuitional-carousel-btn-last.png"];
-
-	bee.services.wizard.config.splashes[0] = @"wizard_1.xml";
-	bee.services.wizard.config.splashes[1] = @"wizard_2.xml";
-	bee.services.wizard.config.splashes[2] = @"wizard_3.xml";
-	bee.services.wizard.config.splashes[3] = @"wizard_4.xml";
-	bee.services.wizard.config.splashes[4] = @"wizard_5.xml";
+//	bee.services.wizard.config.showBackground = YES;
+//	bee.services.wizard.config.showPageControl = YES;
+//	bee.services.wizard.config.backgroundImage = [UIImage imageNamed:@"tuitional_bg.jpg"];
+//	bee.services.wizard.config.pageDotSize = CGSizeMake( 11.0f, 11.0f );
+//	bee.services.wizard.config.pageDotNormal = [UIImage imageNamed:@"tuitional-carousel-active-btn.png"];
+//	bee.services.wizard.config.pageDotHighlighted = [UIImage imageNamed:@"tuitional-carousel-btn.png"];
+//	bee.services.wizard.config.pageDotLast = [UIImage imageNamed:@"tuitional-carousel-btn-last.png"];
+//
+//	bee.services.wizard.config.splashes[0] = @"wizard_1.xml";
+//	bee.services.wizard.config.splashes[1] = @"wizard_2.xml";
+//	bee.services.wizard.config.splashes[2] = @"wizard_3.xml";
+//	bee.services.wizard.config.splashes[3] = @"wizard_4.xml";
+//	bee.services.wizard.config.splashes[4] = @"wizard_5.xml";
     
 	// 配置提示框
 	{
@@ -115,7 +115,7 @@
 	//ALIAS( bee.services.share.tencentweibo,	tweibo );
 	//ALIAS( bee.services.share.sinaweibo,	sweibo );
 	ALIAS( bee.services.alipay,				alipay );
-	ALIAS( bee.services.siri,				siri );
+//	ALIAS( bee.services.siri,				siri );
 	ALIAS( bee.services.location,			lbs );
 
 	// 配置微信
@@ -149,7 +149,7 @@
 	[MobClick setCrashReportEnabled:YES];
 	[MobClick setLatitude:lbs.location.coordinate.latitude longitude:lbs.location.coordinate.longitude];
 	[MobClick setLocation:lbs.location];
-	[MobClick startWithAppkey:@"<Your umengKey>" reportPolicy:BATCH channelId:nil];
+	[MobClick startWithAppkey:@"54b39602fd98c59468000d58" reportPolicy:BATCH channelId:nil];
 	
 	// 配置快递100
 	//[ExpressModel setKuaidi100Key:@"<Your kuaidi100Key>"];

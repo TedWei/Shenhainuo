@@ -15,6 +15,7 @@
 #import "E0_ProfileBoard_iPhone.h"
 #import "E0_ProfileHelpCell_iPhone.h"
 #import "E0_ProfileCell_iPhone.h"
+#import "E0_ProfileAboutUsBoard_iPhone.h"
 #import "E1_PendingPaymentBoard_iPhone.h"
 #import "E2_PendingShippedBoard_iPhone.h"
 #import "E3_PendingReceivedBoard_iPhone.h"
@@ -331,12 +332,8 @@ ON_SIGNAL3( E0_ProfileCell_iPhone, order_shipped, signal )
  */
 ON_SIGNAL3( E0_ProfileCell_iPhone, about_us, signal )
 {
-    G3_HelpEntryBoard_iPhone * board = [G3_HelpEntryBoard_iPhone board];
+    E0_ProfileAboutUsBoard_iPhone * board = [E0_ProfileAboutUsBoard_iPhone board];
     
-    NSNumber *article_id=[NSNumber numberWithInt:5];
-    board.articlePageModel.article_id = article_id;
-    board.articlePageModel.article_title = __TEXT(@"about_us");
-
     [self.stack pushBoard:board animated:YES];
     
 }

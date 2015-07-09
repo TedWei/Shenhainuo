@@ -38,6 +38,7 @@
 @implementation ARTICLE_GROUP
 
 @synthesize article = _article;
+@synthesize id = _id;
 @synthesize name = _name;
 
 CONVERT_PROPERTY_CLASS( article, ARTICLE );
@@ -304,6 +305,48 @@ CONVERT_PROPERTY_CLASS( goods_list, ORDER_GOODS );
 @synthesize thumb = _thumb;
 @synthesize url = _url;
 @synthesize small = _small;
+
+
+//-(void)setImg:(NSString *)img{
+//    _img = img;
+//    [self startDownloadingImage:_img];
+//}
+//
+//-(void)setThumb:(NSString *)thumb{
+//    _thumb = thumb;
+//    [self startDownloadingImage:_thumb];
+//}
+//
+//-(void)setUrl:(NSString *)url{
+//    _url = url;
+//    [self startDownloadingImage:_url];
+//}
+//
+//-(void)setSmall:(NSString *)small{
+//    _small =small;
+//    [self startDownloadingImage:_small];
+//}
+
+
+//-(void)startDownloadingImage:(NSString *)url{
+//    NSURL *imgUrl=[NSURL URLWithString:url];
+//    NSURLRequest *request=[NSURLRequest requestWithURL:imgUrl];
+//    NSURLSessionConfiguration *configuration=[NSURLSessionConfiguration ephemeralSessionConfiguration];
+//    NSURLSession *session=[NSURLSession sessionWithConfiguration:configuration];
+//    NSURLSessionDownloadTask *task=[session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+//        if (!error) {
+//            if ([request.URL isEqual:self.img]) {
+//                UIImage *image=[UIImage imageWithData:[NSData dataWithContentsOfURL:location]];
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                   // [self.img writeToFile:<#(NSString *)#> atomically:<#(BOOL)#> encoding:<#(NSStringEncoding)#> error:<#(NSError **)#>]
+//                  //  self.img=image;
+//                  //  return image;
+//                });
+//            }
+//        }
+//    }];
+//    [task resume];
+//}
 
 @end
 
@@ -1797,6 +1840,7 @@ DEF_MESSAGE_( searchKeywords, msg )
 {
 	if ( msg.sending )
 	{
+        
 //		NSString * requestURI = @"http://shop.ecmobile.me/ecmobile/?url=searchKeywords";
 		NSString * requestURI = [NSString stringWithFormat:@"%@/searchKeywords", [ServerConfig sharedInstance].url];
 		
@@ -1832,6 +1876,7 @@ DEF_MESSAGE_( shopHelp, msg )
 {
 	if ( msg.sending )
 	{
+        
 //		NSString * requestURI = @"http://shop.ecmobile.me/ecmobile/?url=shopHelp";
 		NSString * requestURI = [NSString stringWithFormat:@"%@/shopHelp", [ServerConfig sharedInstance].url];
 		
@@ -1860,6 +1905,45 @@ DEF_MESSAGE_( shopHelp, msg )
 	{
 	}
 }
+
+
+#pragma mark - POST aboutUs
+
+DEF_MESSAGE_( aboutUs, msg )
+{
+    if ( msg.sending )
+    {
+        
+        NSString * requestURI = [NSString stringWithFormat:@"%@/aboutUs", [ServerConfig sharedInstance].url];
+        
+        msg.HTTP_POST( requestURI );
+    }
+    else if ( msg.succeed )
+    {
+        NSDictionary * response = msg.responseJSONDictionary;
+        STATUS * status = [STATUS objectFromDictionary:[response dictAtPath:@"status"]];
+        NSArray * data = [ARTICLE_GROUP objectsFromArray:[response arrayAtPath:@"data"]];
+        
+        if ( nil == status || NO == [status isKindOfClass:[STATUS class]] )
+        {
+            msg.failed = YES;
+            return;
+        }
+        
+        msg.OUTPUT( @"status", status );
+        msg.OUTPUT( @"data", data );
+        
+    }
+    else if ( msg.failed )
+    {
+    }
+    else if ( msg.cancelled )
+    {
+    }
+}
+
+
+
 
 #pragma mark - POST user/collect/create
 

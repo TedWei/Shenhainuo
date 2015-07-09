@@ -22,6 +22,8 @@
 
 @interface E0_ProfileHelpBoard_iPhone : BaseBoard_iPhone
 
+
+
 AS_OUTLET( BeeUIScrollView, list )
 
 AS_MODEL( ArticleGroupModel,	articleGroupModel )

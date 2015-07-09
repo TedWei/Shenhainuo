@@ -23,4 +23,7 @@ AS_SINGLETON( ArticleGroupModel )
 
 @property (nonatomic, retain) NSMutableArray *	articleGroups;
 
+@property (nonatomic,retain) NSString * category;
+
+
 @end

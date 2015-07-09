@@ -115,6 +115,7 @@ enum RANK_LEVEL
 
 @interface ARTICLE_GROUP : NSObject
 @property (nonatomic, retain) NSArray *		article;
+@property (nonatomic, retain) NSNumber *		id;
 @property (nonatomic, retain) NSString *		name;
 @end
 
@@ -507,6 +508,9 @@ AS_MESSAGE( searchKeywords );
 
 // POST shopHelp
 AS_MESSAGE( shopHelp );
+
+// POST aboutUs
+AS_MESSAGE( aboutUs );
 
 // POST user/collect/create
 AS_MESSAGE( user_collect_create );
